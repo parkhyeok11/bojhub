@@ -25,31 +25,15 @@ vector<int> solution(vector<int> answers) {
         if (th > 19) th = 0;
     }
 
-    if (temp[0] == temp[1] && temp[0] == temp[2]) {
+    if (temp[0] >= temp[1] && temp[0] >= temp[2]) {
         answer.push_back(1);
-        answer.push_back(2);
-        answer.push_back(3);
     }
-    if (temp[0] > temp[1] && temp[0] > temp[2]) answer.push_back(1);
-    if (temp[1] > temp[0] && temp[1] > temp[2]) answer.push_back(2);
-    if (temp[2] > temp[1] && temp[2] > temp[0]) answer.push_back(3);
-
-    if (temp[0] == temp[1] && temp[0] > temp[2]) {
-        answer.push_back(1);
+    if (temp[1] >= temp[0] && temp[1] >= temp[2]) {
         answer.push_back(2);
     }
-
-    if (temp[0] == temp[2] && temp[0] > temp[1]) {
-        answer.push_back(1);
+    if (temp[2] >= temp[0] && temp[2] >= temp[1]) {
         answer.push_back(3);
     }
-
-    if (temp[1] == temp[2] && temp[1] > temp[0]) {
-        answer.push_back(2);
-        answer.push_back(3);
-    }
-
-    else;
 
     return answer;
 }
