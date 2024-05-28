@@ -11,11 +11,11 @@ int solution(int n) {
     an[2]=2;
     an[3]=5;
     
-  for(int i = 4; i<=n; i++){ 
-        for(int j=1; j<=i; j++){
-            an[i] += an[i-j] * an[j-1]; 
+      for (int i = 4; i < 16; i++) {
+        for (int j = 0; j < i; j++) {
+            an[i] += an[i-1 - j] * an[j];
         }
-  }
+    }
     answer=an[n];
     return answer;
 }
